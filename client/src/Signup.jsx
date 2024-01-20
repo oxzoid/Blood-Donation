@@ -20,6 +20,17 @@ function Signup(){
                 </div>
                 <div className="mb-3">
                     <label htmlFor="email">
+                        <strong>Phone number +91 </strong>
+                    </label>
+                    <input type="text"
+                    placeholder="Enter number"
+                    autoComplete="off"
+                    name="email"
+                    className="form-control rounded-0">
+                    </input>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="email">
                         <strong>Email</strong>
                     </label>
                     <input type="text"
