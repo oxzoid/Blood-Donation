@@ -1,5 +1,5 @@
 # Blood-Donation
-Blood-DOnation-Group-Project
+Blood-Donation-Group-Project
 
 # Tech Stack
 
