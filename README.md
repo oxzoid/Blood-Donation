@@ -3,7 +3,7 @@ Blood-Donation-Group-Project
 
 # Tech Stack
 
-FLutter
+Flutter
 Supabase
 React
 JS
