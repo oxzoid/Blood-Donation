@@ -30,19 +30,22 @@ function Signup(){
                     autoComplete="off"
                     name="name"
                     className="form-control rounded-0"
-                    onChange={(e)=>setName(e.target.value)}>
+                    onChange={(e)=>setName(e.target.value)}
+                    required>
                     </input>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="PNo">
                         <strong>Phone number +91 </strong>
                     </label>
-                    <input type="text"
+                    <input type="number"
+                    // value={this.state.value}
                     placeholder="Enter number"
                     autoComplete="off"
                     name="PNo"
                     className="form-control rounded-0"
-                    onChange={(e)=>setPhone(e.target.value)}>
+                    onChange={(e)=>setPhone(e.target.value)}
+                    required>
                     </input>
                 </div>
                 <div className="mb-3">
@@ -54,7 +57,8 @@ function Signup(){
                     autoComplete="off"
                     name="email"
                     className="form-control rounded-0"
-                    onChange={(e)=>setEmail(e.target.value)}>
+                    onChange={(e)=>setEmail(e.target.value)}
+                    required>
                     </input>
                 </div>
                 <div className="mb-3">
@@ -66,7 +70,8 @@ function Signup(){
                     autoComplete="off"
                     name="pass"
                     className="form-control rounded-0"
-                    onChange={(e)=>setPassword(e.target.value)}>
+                    onChange={(e)=>setPassword(e.target.value)}
+                    required>
                     </input>
                 </div>
                 <div className="mb-3">
@@ -78,7 +83,8 @@ function Signup(){
                     autoComplete="off"
                     name="btype"
                     className="form-control rounded-0"
-                    onChange={(e)=>setBType(e.target.value)}>
+                    onChange={(e)=>setBType(e.target.value)}
+                    required>
                     </input>
                 </div>
                 <div className="mb-3">
@@ -90,7 +96,8 @@ function Signup(){
                     autoComplete="off"
                     name="city"
                     className="form-control rounded-0"
-                    onChange={(e)=>setCity(e.target.value)}>
+                    onChange={(e)=>setCity(e.target.value)}
+                    required>
                     </input>
                 </div>
                 <button type="submit" className="btn btn-success w-100 rounded-0">
