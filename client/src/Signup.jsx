@@ -22,25 +22,25 @@ function Signup(){
             <h2>Register</h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                    <label htmlFor="email">
+                    <label htmlFor="name">
                         <strong>Name</strong>
                     </label>
                     <input type="text"
                     placeholder="Enter Name"
                     autoComplete="off"
-                    name="email"
+                    name="name"
                     className="form-control rounded-0"
                     onChange={(e)=>setName(e.target.value)}>
                     </input>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="email">
+                    <label htmlFor="PNo">
                         <strong>Phone number +91 </strong>
                     </label>
                     <input type="text"
                     placeholder="Enter number"
                     autoComplete="off"
-                    name="email"
+                    name="PNo"
                     className="form-control rounded-0"
                     onChange={(e)=>setPhone(e.target.value)}>
                     </input>
@@ -58,37 +58,37 @@ function Signup(){
                     </input>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="email">
+                    <label htmlFor="pass">
                         <strong>Password</strong>
                     </label>
                     <input type="text"
                     placeholder="Enter Password"
                     autoComplete="off"
-                    name="email"
+                    name="pass"
                     className="form-control rounded-0"
                     onChange={(e)=>setPassword(e.target.value)}>
                     </input>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="email">
+                    <label htmlFor="btype">
                         <strong>Blood Type</strong>
                     </label>
                     <input type="text"
                     placeholder="Enter blood type"
                     autoComplete="off"
-                    name="email"
+                    name="btype"
                     className="form-control rounded-0"
                     onChange={(e)=>setBType(e.target.value)}>
                     </input>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="email">
+                    <label htmlFor="city">
                         <strong>City of residence</strong>
                     </label>
                     <input type="text"
                     placeholder="Enter city"
                     autoComplete="off"
-                    name="email"
+                    name="city"
                     className="form-control rounded-0"
                     onChange={(e)=>setCity(e.target.value)}>
                     </input>
