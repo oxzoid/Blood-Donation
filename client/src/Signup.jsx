@@ -9,9 +9,13 @@ function Signup(){
     const[btype,setBType] = useState({})
     const[city,setCity] = useState({})
 
+    const [showPassword, setShowPassword] = useState(false);
+
+
+
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://127.0.0.1:5173/register',{name,email,password,btype,city,phone})
+        axios.post('http:/localhost:3000/register',{name,email,password,btype,city,phone})
         .then(result=> console.log(result))
         .catch(err=>console.log(err))
     }
@@ -35,14 +39,14 @@ function Signup(){
                     </input>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="PNo">
+                    <label htmlFor="number">
                         <strong>Phone number +91 </strong>
                     </label>
                     <input type="number"
                     // value={this.state.value}
                     placeholder="Enter number"
                     autoComplete="off"
-                    name="PNo"
+                    name="number"
                     className="form-control rounded-0"
                     onChange={(e)=>setPhone(e.target.value)}
                     required>
@@ -52,27 +56,34 @@ function Signup(){
                     <label htmlFor="email">
                         <strong>Email</strong>
                     </label>
-                    <input type="text"
+                    <input type="email"
                     placeholder="Enter Email"
-                    autoComplete="off"
+                    autoComplete="off"  
                     name="email"
                     className="form-control rounded-0"
                     onChange={(e)=>setEmail(e.target.value)}
                     required>
                     </input>
                 </div>
-                <div className="mb-3">
+                <div className="flex items-center mb-3">
                     <label htmlFor="pass">
                         <strong>Password</strong>
                     </label>
-                    <input type="text"
+                    <input
+                    type={showPassword ? 'text' : 'password'}
                     placeholder="Enter Password"
                     autoComplete="off"
                     name="pass"
                     className="form-control rounded-0"
                     onChange={(e)=>setPassword(e.target.value)}
                     required>
+                        
                     </input>
+                    <button type="button"
+              className="text-xs px-2 border rounded-lg hover:bg-gray-200"
+              onClick={() => setShowPassword(!showPassword)} >
+                {showPassword ? 'Hide' : 'Show'}
+             </button>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="btype">
