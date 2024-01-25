@@ -15,6 +15,24 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 if(mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })){
   console.log("Connected to MongoDB");
 }
+
+app.post('/login',(req,res)=>{
+  const  {email,password} = req.body;
+  DonorModel.findOne({email:email })
+  .then(user=>{
+    if(user){
+      if(user.password===password){
+        res.json("Success")
+      }
+      else{
+        res.json("password is incorrect")
+      }
+    }
+    else{
+      res.json("No record exists")
+    }
+  })
+})
 app.post('/register',(req,res)=> {
     DonorModel.create(req.body)
     .then(donors=>res.json(donors))

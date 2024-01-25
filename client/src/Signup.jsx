@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
     const [formData, setFormData] = useState({
@@ -12,6 +13,7 @@ function Signup() {
         city: '',
     });
 
+    const navigate = useNavigate()
     const [showPassword, setShowPassword] = useState(false);
 
     const handleChange = (e) => {
@@ -27,7 +29,8 @@ function Signup() {
         console.log("formData:", formData);
 
         axios.post('http://localhost:3000/register', formData)
-            .then(result => console.log("Result from server:", result))
+            .then(result => {console.log("Result from server:", result)
+            navigate('/login')})
             .catch(err => console.log("Error from server:", err));
     };
 
