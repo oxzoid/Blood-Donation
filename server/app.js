@@ -16,6 +16,14 @@ if(mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true
   console.log("Connected to MongoDB");
 }
 
+
+const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', () => {
+  console.log('Connected to MongoDB');
+});
+
 app.post('/login',(req,res)=>{
   const  {email,password} = req.body;
   DonorModel.findOne({email:email })
@@ -32,6 +40,14 @@ app.post('/login',(req,res)=>{
       res.json("No record exists")
     }
   })
+})
+app.get('/home',(req,res)=>{
+  DonorModel.findOne({btype:btype})
+  .then(user=>{
+    console.log(user.btype)
+    res.json(user.btype)
+  })
+  .catch(err=>res.json(err))
 })
 app.post('/register',(req,res)=> {
     DonorModel.create(req.body)

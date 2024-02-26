@@ -3,6 +3,9 @@ import axios from 'axios';
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
+
+
+
 function Signup() {
     const [formData, setFormData] = useState({
         name: '',
@@ -35,6 +38,9 @@ function Signup() {
     };
 
     return (
+        <div
+        className="bg-gray-200 backdrop-filter backdrop-blur-sm h-screen flex items-center justify-center"
+      >
         <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
             <div className="bg-white p-3 rounded w-25">
                 <h2>Register</h2>
@@ -148,6 +154,7 @@ function Signup() {
                     Login
                 </Link>
             </div>
+        </div>
         </div>
     );
 }

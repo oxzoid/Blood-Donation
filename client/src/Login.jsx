@@ -36,6 +36,9 @@ function Login(){
     };
 
         return(
+            <div
+      className="bg-gray-200 backdrop-filter backdrop-blur-sm h-screen flex items-center justify-center"
+    >
             <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
             <div className="bg-white p-3 rounded w-25">
                 <h2>Login</h2>
@@ -88,6 +91,7 @@ function Login(){
                 >
                     Register
                 </Link>
+                </div>
                 </div>
                 </div>
         )
